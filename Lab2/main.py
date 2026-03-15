@@ -9,38 +9,11 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier 
 
 # -----------------------------------------
 #                 METHODS
 # -----------------------------------------
-
-# Bin continuous features into categories
-def preprocess_data(df):
-    df = df.copy()
-    
-    df['age'] = pd.cut(df['age'], bins=[0, 16, 18, 21, 100], 
-                       labels=['<=16', '17-18', '19-21', '>21'])
-    
-    df['study_hours_per_week'] = pd.cut(df['study_hours_per_week'], 
-                                         bins=[0, 10, 20, 30, 100],
-                                         labels=['low', 'medium', 'high', 'very_high'])
-    
-    df['attendance_percentage'] = pd.cut(df['attendance_percentage'], 
-                                          bins=[0, 60, 75, 90, 100],
-                                          labels=['poor', 'average', 'good', 'excellent'])
-    
-    df['assignment_score'] = pd.cut(df['assignment_score'], 
-                                     bins=[0, 50, 65, 80, 100],
-                                     labels=['low', 'medium', 'high', 'very_high'])
-    
-    df['exam_score'] = pd.cut(df['exam_score'], 
-                               bins=[0, 50, 65, 80, 100],
-                               labels=['low', 'medium', 'high', 'very_high'])
-    
-    df = df.drop('student_id', axis=1)
-    
-    return df
 
 # Gini Index calculation
 def gini_index(data, label):
@@ -124,9 +97,8 @@ def build_tree_ID3(data, method, label, root=None, max_depth=None, depth=0):
     
     return root
 
-def predict_decision_tree(data_point, decision_tree):
+def predict_decision_tree(data_point, decision_tree, default_prediction=None):
     node = decision_tree
-    default_prediction = 'C'
     
     while isinstance(node, dict):
         feature = list(node.keys())[0]
@@ -149,12 +121,14 @@ def plot_matrix(matrix):
     plt.ylabel('Ground Truth')
     plt.show()
 
-def generate_report(data, tree):
+def generate_report(data, tree, label):
     predictions = []
-    actual = data.iloc[:,-1].astype(str)
+    actual = data[label].astype(str)
+    default_prediction = data[label].mode()[0]
+
     for _, row in data.iterrows():
-        row = row.drop(data.columns[-1], axis = 0)
-        pre = predict_decision_tree(row, tree)
+        row = row.drop(label, axis = 0)
+        pre = predict_decision_tree(row, tree, default_prediction)
         predictions.append(str(pre))
 
     report = classification_report(actual, predictions, zero_division=0)
@@ -162,37 +136,114 @@ def generate_report(data, tree):
 
     return report, matrix
 
+def visualize_tree(tree, data, label, graph=None, parent=None, 
+                   edge_label='', max_depth=None, depth=0):
+    if graph is None:
+        graph = graphviz.Digraph(graph_attr={
+            'rankdir': 'TB'
+        })
+    
+    class_colors = {
+        'unacc':  '#F4A460',
+        'acc':    '#87CEEB', 
+        'good':   '#90EE90',
+        'vgood':  "#24F224"
+    }
+
+    def get_node_info(subset, label):
+        total = len(subset)
+        counts = subset[label].value_counts()
+        majority = counts.idxmax()
+
+        # Gini
+        gini = 1.0
+        for c in counts:
+            gini -= (c / total) ** 2
+
+        dist = [int(counts.get(c, 0)) for c in sorted(subset[label].unique())]
+        return total, gini, majority, dist
+
+    if max_depth is not None and depth >= max_depth:
+        node_id = f'trunc_{parent}_{edge_label}'
+        graph.node(node_id, label='...', shape='ellipse',
+                   style='filled', fillcolor='lightgray',
+                   fontname='Helvetica')
+        if parent is not None:
+            graph.edge(parent, node_id, label=edge_label, fontsize='10')
+        return graph
+
+    if isinstance(tree, dict):
+        feature = list(tree.keys())[0]
+        node_id = str(id(tree))
+
+        total, gini, majority, dist = get_node_info(data, label)
+        color = class_colors.get(majority, '#87CEEB')
+
+        node_label = (
+            f"{feature}\n"
+            f"gini = {gini:.4f}\n"
+            f"samples = {total}\n"
+            f"value = {dist}\n"
+            f"class = {majority}"
+        )
+
+        graph.node(node_id, label=node_label,
+                   shape='box', style='filled,rounded',
+                   fillcolor=color, fontname='Helvetica', fontsize='11')
+
+        if parent is not None:
+            graph.edge(parent, node_id, label=edge_label,
+                       fontsize='10', fontname='Helvetica')
+
+        for value, subtree in tree[feature].items():
+            subset = data[data[feature] == value]
+            visualize_tree(subtree, subset, label, graph,
+                          parent=node_id, edge_label=str(value),
+                          max_depth=max_depth, depth=depth + 1)
+
+    else:
+        # Leaf node
+        leaf_id = f'leaf_{parent}_{edge_label}'
+        total, gini, majority, dist = get_node_info(data, label)
+        color = class_colors.get(str(tree), 'white')
+
+        leaf_label = (
+            f"gini = {gini:.4f}\n"
+            f"samples = {total}\n"
+            f"value = {dist}\n"
+            f"class = {tree}"
+        )
+
+        graph.node(leaf_id, label=leaf_label,
+                   shape='box', style='filled,rounded',
+                   fillcolor=color, fontname='Helvetica', fontsize='11')
+
+        if parent is not None:
+            graph.edge(parent, leaf_id, label=edge_label,
+                       fontsize='10', fontname='Helvetica')
+
+    return graph
+
 # -----------------------------------------
 #                MAIN PROCESS
 # -----------------------------------------
 
-df = pd.read_csv("student_performance_academic_5000.csv")
-df = preprocess_data(df)
+df = pd.read_csv('car.data', header=None, names=[
+    'buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class'
+])
+print('df.head():\n')
 print(df.head())
 
-df_raw = pd.read_csv("student_performance_academic_5000.csv")
-print(df_raw.groupby('final_grade')[['exam_score', 'assignment_score', 
-                                      'attendance_percentage', 
-                                      'study_hours_per_week']].mean().round(1))
-
-'''
-    Bad data set:
-        - A student with ~68% exam score is equally likely to get and A,B,C,D or F. So no algorithm can learn from this data set...
-
-            exam_score  assignment_score  attendance_percentage  study_hours_per_week
-final_grade                                                                           
-A              68.2           70.8                74.4                  19.5
-B              68.4           69.3                74.4                  19.6
-C              66.8           70.3                75.1                  20.3
-D              67.7           70.6                74.8                  19.8
-F              67.2           70.3                75.2                  20.1
-'''
+print('\nClass distribution:\n')
+print(df['class'].value_counts())
 
 # Split data into training and testing subsets (80% training, 20% testing)
-train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+train_df, test_df = train_test_split(df, test_size=0.2, 
+                                      random_state=42, 
+                                      stratify=df['class'])
 
-print(f"\nTraining set size: {len(train_df)}")
-print(f"\nTesting set size: {len(test_df)}")
+print('\nTraining set class distribution:\n')
+print(train_df['class'].value_counts())
 
 # Calculate missing values
 missing_values = df.isnull().sum()
@@ -210,26 +261,39 @@ corr = df_hot.corr()
 m = np.triu(corr)
 plt.figure(figsize = (12, 12))
 sns.heatmap(corr, annot = True, mask = m)
-# plt.show()
+plt.show()
 
 # Calculate information gain
-info_gain = cal_info_gain(df, 'gini', 'final_grade')
-max_width = max(len(item[0]) for item in info_gain)
-
-for item in info_gain:
-    print(f"{item[0].ljust(max_width)}  {float(item[1]):.6f}")
+print("\nInformation Gain (Gini Index):\n")
+info_gain = cal_info_gain(df, 'gini', 'class')
+info_gain_sorted = sorted(info_gain, key=lambda x: x[1], reverse=True)
+for item in info_gain_sorted:
+    print(f"{item[0]:30s} {item[1]:.6f}")
 
 # Training
-id3_tree = build_tree_ID3(train_df, 'gini', 'final_grade', max_depth=3)
+
+# At depth 5, tree has best accuracy: training 0.96, testing 0.95
+# More than 5, tree starts to overfit, at depth 6, training accuracy is 1.0, but testing accuracy drops to 0.90
+id3_tree = build_tree_ID3(train_df, 'gini', 'class', max_depth=5)
 
 # Train report
-report, matrix = generate_report(train_df, id3_tree)
+report, matrix = generate_report(train_df, id3_tree, 'class')
 print('\nTrain Report\n')
 print(report)
 plot_matrix(matrix)
 
 # Test report
-report, matrix = generate_report(test_df, id3_tree)
+report, matrix = generate_report(test_df, id3_tree, 'class')
 print('\nTest Report\n')
 print(report)
 plot_matrix(matrix)
+
+# Visualize tree
+graph_full = visualize_tree(id3_tree, train_df, 'class')
+graph_full.render('car_tree_full', format='png', cleanup=True)
+graph_full.view()
+
+# Render readable fragment for report (first 3 levels)
+graph_preview = visualize_tree(id3_tree, train_df, 'class', max_depth=3)
+graph_preview.render('car_tree_preview', format='png', cleanup=True)
+graph_preview.view()
