@@ -228,6 +228,31 @@ def visualize_tree(tree, data, label, graph=None, parent=None,
 #                MAIN PROCESS
 # -----------------------------------------
 
+# Dataset: https://archive.ics.uci.edu/dataset/19/car+evaluation
+'''
+    Ataskaitai:
+
+    Duomenu rinkinys apima 1728 irasus, trukstamu reiksmiu nera.
+    Rinkinys skirtas ivertinti ar automobilis yra tinkamas pirkimui.
+
+    Atributai:
+        1. buying (Automobilio pirkinio kaina): vhigh, high, med, low
+        2. maint (Automobilio prieziuros kaina): vhigh, high, med, low
+        3. doors (Durys): 2, 3, 4, 5more (5 ir daugiau)
+        4. persons (Keleiviu talpa): 2, 4, more (daugiau nei 4)
+        5. lug_boot (Bagažo skyriaus dydis): small, med, big
+        6. safety (Saugumas): low, med, high
+        7. class (Automobilio vertinimas): unacc (netinkamas), acc (tinkamas), good (geras), vgood (labai geras)
+
+    Pasiskirstymas:
+        unacc: 1210  ~70%
+        acc  : 384   ~22%
+        good : 69    ~4%
+        vgood: 65    ~4%
+
+    Klase yra disbalansuota, daugiausia netinkamu automobiliu, todel butent sita
+    klase bus geriausiai atpazystama.
+'''
 df = pd.read_csv('car.data', header=None, names=[
     'buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class'
 ])
@@ -270,10 +295,16 @@ info_gain_sorted = sorted(info_gain, key=lambda x: x[1], reverse=True)
 for item in info_gain_sorted:
     print(f"{item[0]:30s} {item[1]:.6f}")
 
-# Training
 
-# At depth 5, tree has best accuracy: training 0.96, testing 0.95
-# More than 5, tree starts to overfit, at depth 6, training accuracy is 1.0, but testing accuracy drops to 0.90
+# Treniravimas
+'''
+    Ataskaitai:
+
+    Kai gylis yra 5, modelis pasiekia geriausia tiksluma: treniravime 0.96, testavime 0.95.
+
+    Didesnis gylis nei 5 sukelia overfitting'a, kai gylis yra 6, treniravimo tikslumas yra 1.0, bet testavimo tikslumas krenta iki 0.90.
+'''
+
 id3_tree = build_tree_ID3(train_df, 'gini', 'class', max_depth=5)
 
 # Train report

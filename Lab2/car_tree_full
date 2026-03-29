@@ -1,1147 +1,1147 @@
 digraph {
 	graph [rankdir=TB]
-	140179580545600 [label="safety
+	140555142110912 [label="safety
 gini = 0.4570
 samples = 1382
 value = [307, 55, 968, 52]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580398912 [label="persons
+	140555164134464 [label="persons
 gini = 0.5174
 samples = 447
 value = [143, 30, 274]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580545600 -> 140179580398912 [label=med fontname=Helvetica fontsize=10]
-	140179611289152 [label="buying
+	140555142110912 -> 140555164134464 [label=med fontname=Helvetica fontsize=10]
+	140555173940800 [label="buying
 gini = 0.5696
 samples = 150
 value = [72, 12, 66]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580398912 -> 140179611289152 [label=4 fontname=Helvetica fontsize=10]
-	140179588007296 [label="maint
+	140555164134464 -> 140555173940800 [label=4 fontname=Helvetica fontsize=10]
+	140555150101056 [label="maint
 gini = 0.5362
 samples = 37
 value = [23, 5, 9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289152 -> 140179588007296 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179588007296_med [label="gini = 0.0000
+	140555173940800 -> 140555150101056 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555150101056_med [label="gini = 0.0000
 samples = 9
 value = [9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588007296 -> leaf_140179588007296_med [label=med fontname=Helvetica fontsize=10]
-	140179611287936 [label="lug_boot
+	140555150101056 -> leaf_140555150101056_med [label=med fontname=Helvetica fontsize=10]
+	140555150445632 [label="lug_boot
 gini = 0.5000
 samples = 10
 value = [5, 5]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588007296 -> 140179611287936 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179611287936_med [label="gini = 0.5000
+	140555150101056 -> 140555150445632 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555150445632_med [label="gini = 0.5000
 samples = 4
 value = [2, 2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611287936 -> leaf_140179611287936_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179611287936_big [label="gini = 0.0000
+	140555150445632 -> leaf_140555150445632_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555150445632_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611287936 -> leaf_140179611287936_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179611287936_small [label="gini = 0.0000
+	140555150445632 -> leaf_140555150445632_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555150445632_small [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611287936 -> leaf_140179611287936_small [label=small fontname=Helvetica fontsize=10]
-	140179580547264 [label="lug_boot
+	140555150445632 -> leaf_140555150445632_small [label=small fontname=Helvetica fontsize=10]
+	140555151746816 [label="lug_boot
 gini = 0.4938
 samples = 9
 value = [5, 4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588007296 -> 140179580547264 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580547264_small [label="gini = 0.0000
+	140555150101056 -> 140555151746816 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555151746816_small [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580547264 -> leaf_140179580547264_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580547264_big [label="gini = 0.0000
+	140555151746816 -> leaf_140555151746816_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555151746816_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580547264 -> leaf_140179580547264_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580547264_med [label="gini = 0.4444
+	140555151746816 -> leaf_140555151746816_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555151746816_med [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580547264 -> leaf_140179580547264_med [label=med fontname=Helvetica fontsize=10]
-	140179587742976 [label="lug_boot
+	140555151746816 -> leaf_140555151746816_med [label=med fontname=Helvetica fontsize=10]
+	140555151424448 [label="lug_boot
 gini = 0.4938
 samples = 9
 value = [4, 5]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588007296 -> 140179587742976 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179587742976_small [label="gini = 0.0000
+	140555150101056 -> 140555151424448 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555151424448_small [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587742976 -> leaf_140179587742976_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179587742976_med [label="gini = 0.5000
+	140555151424448 -> leaf_140555151424448_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555151424448_med [label="gini = 0.5000
 samples = 2
 value = [1, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587742976 -> leaf_140179587742976_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179587742976_big [label="gini = 0.0000
+	140555151424448 -> leaf_140555151424448_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555151424448_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587742976 -> leaf_140179587742976_big [label=big fontname=Helvetica fontsize=10]
-	140179588020096 [label="lug_boot
+	140555151424448 -> leaf_140555151424448_big [label=big fontname=Helvetica fontsize=10]
+	140555151006144 [label="lug_boot
 gini = 0.4778
 samples = 38
 value = [15, 23]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289152 -> 140179588020096 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179588020096_small [label="gini = 0.0000
+	140555173940800 -> 140555151006144 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555151006144_small [label="gini = 0.0000
 samples = 13
 value = [13]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588020096 -> leaf_140179588020096_small [label=small fontname=Helvetica fontsize=10]
-	140179611292736 [label="doors
+	140555151006144 -> leaf_140555151006144_small [label=small fontname=Helvetica fontsize=10]
+	140555173940416 [label="doors
 gini = 0.4628
 samples = 11
 value = [4, 7]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588020096 -> 140179611292736 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179611292736_2 [label="gini = 0.0000
+	140555151006144 -> 140555173940416 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555173940416_2 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611292736 -> leaf_140179611292736_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179611292736_3 [label="gini = 0.0000
+	140555173940416 -> leaf_140555173940416_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555173940416_3 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611292736 -> leaf_140179611292736_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179611292736_4 [label="gini = 0.4444
+	140555173940416 -> leaf_140555173940416_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555173940416_4 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611292736 -> leaf_140179611292736_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179611292736_5more [label="gini = 0.0000
+	140555173940416 -> leaf_140555173940416_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555173940416_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611292736 -> leaf_140179611292736_5more [label="5more" fontname=Helvetica fontsize=10]
-	140179580496576 [label="maint
+	140555173940416 -> leaf_140555173940416_5more [label="5more" fontname=Helvetica fontsize=10]
+	140555164129280 [label="maint
 gini = 0.3367
 samples = 14
 value = [11, 3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588020096 -> 140179580496576 [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580496576_med [label="gini = 0.0000
+	140555151006144 -> 140555164129280 [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164129280_med [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580496576 -> leaf_140179580496576_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580496576_vhigh [label="gini = 0.0000
+	140555164129280 -> leaf_140555164129280_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164129280_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580496576 -> leaf_140179580496576_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580496576_low [label="gini = 0.0000
+	140555164129280 -> leaf_140555164129280_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164129280_low [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580496576 -> leaf_140179580496576_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580496576_high [label="gini = 0.0000
+	140555164129280 -> leaf_140555164129280_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164129280_high [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580496576 -> leaf_140179580496576_high [label=high fontname=Helvetica fontsize=10]
-	140179580550208 [label="maint
+	140555164129280 -> leaf_140555164129280_high [label=high fontname=Helvetica fontsize=10]
+	140555150589184 [label="maint
 gini = 0.4050
 samples = 39
 value = [11, 28]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289152 -> 140179580550208 [label=vhigh fontname=Helvetica fontsize=10]
-	140179580497088 [label="lug_boot
+	140555173940800 -> 140555150589184 [label=vhigh fontname=Helvetica fontsize=10]
+	140555173409792 [label="lug_boot
 gini = 0.4959
 samples = 11
 value = [5, 6]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580550208 -> 140179580497088 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580497088_big [label="gini = 0.0000
+	140555150589184 -> 140555173409792 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555173409792_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580497088 -> leaf_140179580497088_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580497088_small [label="gini = 0.0000
+	140555173409792 -> leaf_140555173409792_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555173409792_small [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580497088 -> leaf_140179580497088_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580497088_med [label="gini = 0.4444
+	140555173409792 -> leaf_140555173409792_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555173409792_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580497088 -> leaf_140179580497088_med [label=med fontname=Helvetica fontsize=10]
-	140179611289728 [label="lug_boot
+	140555173409792 -> leaf_140555173409792_med [label=med fontname=Helvetica fontsize=10]
+	140555150442560 [label="lug_boot
 gini = 0.4800
 samples = 10
 value = [6, 4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580550208 -> 140179611289728 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179611289728_big [label="gini = 0.0000
+	140555150589184 -> 140555150442560 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555150442560_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289728 -> leaf_140179611289728_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179611289728_med [label="gini = 0.5000
+	140555150442560 -> leaf_140555150442560_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555150442560_med [label="gini = 0.5000
 samples = 4
 value = [2, 2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289728 -> leaf_140179611289728_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179611289728_small [label="gini = 0.0000
+	140555150442560 -> leaf_140555150442560_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555150442560_small [label="gini = 0.0000
 samples = 2
 value = [2]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289728 -> leaf_140179611289728_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580550208_vhigh [label="gini = 0.0000
+	140555150442560 -> leaf_140555150442560_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555150589184_vhigh [label="gini = 0.0000
 samples = 10
 value = [10]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580550208 -> leaf_140179580550208_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580550208_high [label="gini = 0.0000
+	140555150589184 -> leaf_140555150589184_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555150589184_high [label="gini = 0.0000
 samples = 8
 value = [8]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580550208 -> leaf_140179580550208_high [label=high fontname=Helvetica fontsize=10]
-	140179580537024 [label="maint
+	140555150589184 -> leaf_140555150589184_high [label=high fontname=Helvetica fontsize=10]
+	140555164128576 [label="maint
 gini = 0.5262
 samples = 36
 value = [23, 7, 6]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611289152 -> 140179580537024 [label=low fontname=Helvetica fontsize=10]
-	140179587738368 [label="lug_boot
+	140555173940800 -> 140555164128576 [label=low fontname=Helvetica fontsize=10]
+	140555151424192 [label="lug_boot
 gini = 0.5000
 samples = 12
 value = [6, 6]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580537024 -> 140179587738368 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179587738368_big [label="gini = 0.0000
+	140555164128576 -> 140555151424192 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555151424192_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587738368 -> leaf_140179587738368_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179587738368_med [label="gini = 0.5000
+	140555151424192 -> leaf_140555151424192_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555151424192_med [label="gini = 0.5000
 samples = 4
 value = [2, 2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587738368 -> leaf_140179587738368_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179587738368_small [label="gini = 0.0000
+	140555151424192 -> leaf_140555151424192_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555151424192_small [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179587738368 -> leaf_140179587738368_small [label=small fontname=Helvetica fontsize=10]
-	140179580586944 [label="lug_boot
+	140555151424192 -> leaf_140555151424192_small [label=small fontname=Helvetica fontsize=10]
+	140555164080512 [label="lug_boot
 gini = 0.4688
 samples = 8
 value = [5, 3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580537024 -> 140179580586944 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580586944_small [label="gini = 0.0000
+	140555164128576 -> 140555164080512 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164080512_small [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586944 -> leaf_140179580586944_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580586944_big [label="gini = 0.0000
+	140555164080512 -> leaf_140555164080512_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164080512_big [label="gini = 0.0000
 samples = 2
 value = [2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586944 -> leaf_140179580586944_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580586944_med [label="gini = 0.5000
+	140555164080512 -> leaf_140555164080512_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164080512_med [label="gini = 0.5000
 samples = 2
 value = [1, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586944 -> leaf_140179580586944_med [label=med fontname=Helvetica fontsize=10]
-	140179580587904 [label="lug_boot
+	140555164080512 -> leaf_140555164080512_med [label=med fontname=Helvetica fontsize=10]
+	140555164075392 [label="lug_boot
 gini = 0.5000
 samples = 8
 value = [4, 4]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580537024 -> 140179580587904 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580587904_med [label="gini = 0.5000
+	140555164128576 -> 140555164075392 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164075392_med [label="gini = 0.5000
 samples = 4
 value = [2, 2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587904 -> leaf_140179580587904_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580587904_small [label="gini = 0.0000
+	140555164075392 -> leaf_140555164075392_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164075392_small [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587904 -> leaf_140179580587904_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580587904_big [label="gini = 0.0000
+	140555164075392 -> leaf_140555164075392_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164075392_big [label="gini = 0.0000
 samples = 2
 value = [2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587904 -> leaf_140179580587904_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580537024_high [label="gini = 0.0000
+	140555164075392 -> leaf_140555164075392_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164128576_high [label="gini = 0.0000
 samples = 8
 value = [8]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580537024 -> leaf_140179580537024_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580398912_2 [label="gini = 0.0000
+	140555164128576 -> leaf_140555164128576_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164134464_2 [label="gini = 0.0000
 samples = 145
 value = [145]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580398912 -> leaf_140179580398912_2 [label=2 fontname=Helvetica fontsize=10]
-	140179580586496 [label="lug_boot
+	140555164134464 -> leaf_140555164134464_2 [label=2 fontname=Helvetica fontsize=10]
+	140555164090240 [label="lug_boot
 gini = 0.5960
 samples = 152
 value = [71, 18, 63]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580398912 -> 140179580586496 [label=more fontname=Helvetica fontsize=10]
-	140179580588480 [label="buying
+	140555164134464 -> 140555164090240 [label=more fontname=Helvetica fontsize=10]
+	140555164084608 [label="buying
 gini = 0.3482
 samples = 49
 value = [11, 38]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586496 -> 140179580588480 [label=small fontname=Helvetica fontsize=10]
-	140179580585984 [label="doors
+	140555164090240 -> 140555164084608 [label=small fontname=Helvetica fontsize=10]
+	140555150445120 [label="doors
 gini = 0.4959
 samples = 11
 value = [6, 5]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588480 -> 140179580585984 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580585984_5more [label="gini = 0.0000
+	140555164084608 -> 140555150445120 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555150445120_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580585984 -> leaf_140179580585984_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580585984_4 [label="gini = 0.4444
+	140555150445120 -> leaf_140555150445120_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555150445120_4 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580585984 -> leaf_140179580585984_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179580585984_3 [label="gini = 0.4444
+	140555150445120 -> leaf_140555150445120_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555150445120_3 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580585984 -> leaf_140179580585984_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179580585984_2 [label="gini = 0.0000
+	140555150445120 -> leaf_140555150445120_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555150445120_2 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580585984 -> leaf_140179580585984_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580588480_vhigh [label="gini = 0.0000
+	140555150445120 -> leaf_140555150445120_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164084608_vhigh [label="gini = 0.0000
 samples = 13
 value = [13]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588480 -> leaf_140179580588480_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179611300096 [label="doors
+	140555164084608 -> leaf_140555164084608_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555151359232 [label="doors
 gini = 0.4861
 samples = 12
 value = [5, 7]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588480 -> 140179611300096 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179611300096_4 [label="gini = 0.4444
+	140555164084608 -> 140555151359232 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555151359232_4 [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611300096 -> leaf_140179611300096_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179611300096_2 [label="gini = 0.0000
+	140555151359232 -> leaf_140555151359232_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555151359232_2 [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611300096 -> leaf_140179611300096_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179611300096_3 [label="gini = 0.4444
+	140555151359232 -> leaf_140555151359232_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555151359232_3 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611300096 -> leaf_140179611300096_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179611300096_5more [label="gini = 0.0000
+	140555151359232 -> leaf_140555151359232_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555151359232_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179611300096 -> leaf_140179611300096_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580588480_high [label="gini = 0.0000
+	140555151359232 -> leaf_140555151359232_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164084608_high [label="gini = 0.0000
 samples = 13
 value = [13]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588480 -> leaf_140179580588480_high [label=high fontname=Helvetica fontsize=10]
-	140179580593152 [label="buying
+	140555164084608 -> leaf_140555164084608_high [label=high fontname=Helvetica fontsize=10]
+	140555164159104 [label="buying
 gini = 0.5644
 samples = 51
 value = [29, 6, 16]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586496 -> 140179580593152 [label=med fontname=Helvetica fontsize=10]
-	140179580587648 [label="maint
+	140555164090240 -> 140555164159104 [label=med fontname=Helvetica fontsize=10]
+	140555164158720 [label="maint
 gini = 0.4260
 samples = 13
 value = [9, 4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593152 -> 140179580587648 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580587648_low [label="gini = 0.4444
+	140555164159104 -> 140555164158720 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164158720_low [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587648 -> leaf_140179580587648_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580587648_med [label="gini = 0.4444
+	140555164158720 -> leaf_140555164158720_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164158720_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587648 -> leaf_140179580587648_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580587648_high [label="gini = 0.0000
+	140555164158720 -> leaf_140555164158720_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164158720_high [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587648 -> leaf_140179580587648_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580587648_vhigh [label="gini = 0.0000
+	140555164158720 -> leaf_140555164158720_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164158720_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580587648 -> leaf_140179580587648_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179580588864 [label="maint
+	140555164158720 -> leaf_140555164158720_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164090176 [label="maint
 gini = 0.4734
 samples = 13
 value = [9, 2, 2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593152 -> 140179580588864 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580588864_vhigh [label="gini = 0.4444
+	140555164159104 -> 140555164090176 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164090176_vhigh [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588864 -> leaf_140179580588864_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580588864_med [label="gini = 0.0000
+	140555164090176 -> leaf_140555164090176_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164090176_med [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588864 -> leaf_140179580588864_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580588864_high [label="gini = 0.3750
+	140555164090176 -> leaf_140555164090176_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164090176_high [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588864 -> leaf_140179580588864_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580588864_low [label="gini = 0.4444
+	140555164090176 -> leaf_140555164090176_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164090176_low [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588864 -> leaf_140179580588864_low [label=low fontname=Helvetica fontsize=10]
-	140179580591168 [label="maint
+	140555164090176 -> leaf_140555164090176_low [label=low fontname=Helvetica fontsize=10]
+	140555164157952 [label="maint
 gini = 0.4444
 samples = 12
 value = [4, 8]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593152 -> 140179580591168 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580591168_med [label="gini = 0.0000
+	140555164159104 -> 140555164157952 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164157952_med [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591168 -> leaf_140179580591168_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580591168_low [label="gini = 0.5000
+	140555164157952 -> leaf_140555164157952_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164157952_low [label="gini = 0.5000
 samples = 2
 value = [1, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591168 -> leaf_140179580591168_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580591168_vhigh [label="gini = 0.0000
+	140555164157952 -> leaf_140555164157952_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164157952_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591168 -> leaf_140179580591168_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580591168_high [label="gini = 0.0000
+	140555164157952 -> leaf_140555164157952_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164157952_high [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591168 -> leaf_140179580591168_high [label=high fontname=Helvetica fontsize=10]
-	140179580586688 [label="doors
+	140555164157952 -> leaf_140555164157952_high [label=high fontname=Helvetica fontsize=10]
+	140555164157888 [label="doors
 gini = 0.4970
 samples = 13
 value = [7, 6]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593152 -> 140179580586688 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580586688_2 [label="gini = 0.0000
+	140555164159104 -> 140555164157888 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164157888_2 [label="gini = 0.0000
 samples = 4
 value = [4]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586688 -> leaf_140179580586688_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580586688_3 [label="gini = 0.3750
+	140555164157888 -> leaf_140555164157888_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164157888_3 [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586688 -> leaf_140179580586688_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179580586688_4 [label="gini = 0.0000
+	140555164157888 -> leaf_140555164157888_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164157888_4 [label="gini = 0.0000
 samples = 1
 value = [1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586688 -> leaf_140179580586688_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179580586688_5more [label="gini = 0.3750
+	140555164157888 -> leaf_140555164157888_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164157888_5more [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586688 -> leaf_140179580586688_5more [label="5more" fontname=Helvetica fontsize=10]
-	140179580589568 [label="maint
+	140555164157888 -> leaf_140555164157888_5more [label="5more" fontname=Helvetica fontsize=10]
+	140555164156864 [label="maint
 gini = 0.5614
 samples = 52
 value = [31, 12, 9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580586496 -> 140179580589568 [label=big fontname=Helvetica fontsize=10]
-	140179580593088 [label="buying
+	140555164090240 -> 140555164156864 [label=big fontname=Helvetica fontsize=10]
+	140555164160768 [label="buying
 gini = 0.3367
 samples = 14
 value = [11, 3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589568 -> 140179580593088 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580593088_med [label="gini = 0.0000
+	140555164156864 -> 140555164160768 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164160768_med [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593088 -> leaf_140179580593088_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580593088_vhigh [label="gini = 0.0000
+	140555164160768 -> leaf_140555164160768_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164160768_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593088 -> leaf_140179580593088_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580593088_high [label="gini = 0.0000
+	140555164160768 -> leaf_140555164160768_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164160768_high [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593088 -> leaf_140179580593088_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580593088_low [label="gini = 0.0000
+	140555164160768 -> leaf_140555164160768_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164160768_low [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593088 -> leaf_140179580593088_low [label=low fontname=Helvetica fontsize=10]
-	140179580593984 [label="buying
+	140555164160768 -> leaf_140555164160768_low [label=low fontname=Helvetica fontsize=10]
+	140555164158848 [label="buying
 gini = 0.4959
 samples = 11
 value = [5, 6]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589568 -> 140179580593984 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580593984_low [label="gini = 0.0000
+	140555164156864 -> 140555164158848 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164158848_low [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593984 -> leaf_140179580593984_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580593984_med [label="gini = 0.0000
+	140555164158848 -> leaf_140555164158848_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164158848_med [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593984 -> leaf_140179580593984_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580593984_vhigh [label="gini = 0.0000
+	140555164158848 -> leaf_140555164158848_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164158848_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593984 -> leaf_140179580593984_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580593984_high [label="gini = 0.0000
+	140555164158848 -> leaf_140555164158848_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164158848_high [label="gini = 0.0000
 samples = 3
 value = [3]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593984 -> leaf_140179580593984_high [label=high fontname=Helvetica fontsize=10]
-	140179580595456 [label="buying
+	140555164158848 -> leaf_140555164158848_high [label=high fontname=Helvetica fontsize=10]
+	140555164159872 [label="buying
 gini = 0.4898
 samples = 14
 value = [6, 8]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589568 -> 140179580595456 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580595456_med [label="gini = 0.0000
+	140555164156864 -> 140555164159872 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164159872_med [label="gini = 0.0000
 samples = 4
 value = [4]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595456 -> leaf_140179580595456_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580595456_high [label="gini = 0.0000
+	140555164159872 -> leaf_140555164159872_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164159872_high [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595456 -> leaf_140179580595456_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580595456_low [label="gini = 0.0000
+	140555164159872 -> leaf_140555164159872_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164159872_low [label="gini = 0.0000
 samples = 4
 value = [4]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595456 -> leaf_140179580595456_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580595456_vhigh [label="gini = 0.0000
+	140555164159872 -> leaf_140555164159872_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164159872_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595456 -> leaf_140179580595456_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179580592000 [label="buying
+	140555164159872 -> leaf_140555164159872_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164159808 [label="buying
 gini = 0.4260
 samples = 13
 value = [9, 4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589568 -> 140179580592000 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580592000_med [label="gini = 0.0000
+	140555164156864 -> 140555164159808 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164159808_med [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592000 -> leaf_140179580592000_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580592000_high [label="gini = 0.0000
+	140555164159808 -> leaf_140555164159808_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164159808_high [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592000 -> leaf_140179580592000_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580592000_low [label="gini = 0.0000
+	140555164159808 -> leaf_140555164159808_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164159808_low [label="gini = 0.0000
 samples = 4
 value = [4]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592000 -> leaf_140179580592000_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580592000_vhigh [label="gini = 0.0000
+	140555164159808 -> leaf_140555164159808_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164159808_vhigh [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592000 -> leaf_140179580592000_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179588079488 [label="persons
+	140555164159808 -> leaf_140555164159808_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555143838528 [label="persons
 gini = 0.6258
 samples = 470
 value = [164, 25, 229, 52]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580545600 -> 140179588079488 [label=high fontname=Helvetica fontsize=10]
-	140179580584704 [label="buying
+	140555142110912 -> 140555143838528 [label=high fontname=Helvetica fontsize=10]
+	140555164075136 [label="buying
 gini = 0.6130
 samples = 150
 value = [85, 15, 27, 23]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588079488 -> 140179580584704 [label=4 fontname=Helvetica fontsize=10]
-	140179580588736 [label="maint
+	140555143838528 -> 140555164075136 [label=4 fontname=Helvetica fontsize=10]
+	140555164158144 [label="maint
 gini = 0.5391
 samples = 39
 value = [24, 5, 10]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584704 -> 140179580588736 [label=med fontname=Helvetica fontsize=10]
-	140179580593408 [label="lug_boot
+	140555164075136 -> 140555164158144 [label=med fontname=Helvetica fontsize=10]
+	140555164161536 [label="lug_boot
 gini = 0.5000
 samples = 10
 value = [5, 5]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588736 -> 140179580593408 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580593408_med [label="gini = 0.4444
+	140555164158144 -> 140555164161536 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164161536_med [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593408 -> leaf_140179580593408_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580593408_big [label="gini = 0.0000
+	140555164161536 -> leaf_140555164161536_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164161536_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593408 -> leaf_140179580593408_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580593408_small [label="gini = 0.0000
+	140555164161536 -> leaf_140555164161536_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164161536_small [label="gini = 0.0000
 samples = 3
 value = [3]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580593408 -> leaf_140179580593408_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580588736_vhigh [label="gini = 0.0000
+	140555164161536 -> leaf_140555164161536_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164158144_vhigh [label="gini = 0.0000
 samples = 9
 value = [9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588736 -> leaf_140179580588736_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580588736_high [label="gini = 0.0000
+	140555164158144 -> leaf_140555164158144_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164158144_high [label="gini = 0.0000
 samples = 11
 value = [11]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588736 -> leaf_140179580588736_high [label=high fontname=Helvetica fontsize=10]
-	140179580594688 [label="lug_boot
+	140555164158144 -> leaf_140555164158144_high [label=high fontname=Helvetica fontsize=10]
+	140555164161664 [label="lug_boot
 gini = 0.4938
 samples = 9
 value = [4, 5]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588736 -> 140179580594688 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580594688_big [label="gini = 0.0000
+	140555164158144 -> 140555164161664 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164161664_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594688 -> leaf_140179580594688_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580594688_med [label="gini = 0.4444
+	140555164161664 -> leaf_140555164161664_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164161664_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594688 -> leaf_140179580594688_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580594688_small [label="gini = 0.0000
+	140555164161664 -> leaf_140555164161664_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164161664_small [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594688 -> leaf_140179580594688_small [label=small fontname=Helvetica fontsize=10]
-	140179580584064 [label="maint
+	140555164161664 -> leaf_140555164161664_small [label=small fontname=Helvetica fontsize=10]
+	140555164080640 [label="maint
 gini = 0.3389
 samples = 37
 value = [29, 8]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584704 -> 140179580584064 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580584064_med [label="gini = 0.0000
+	140555164075136 -> 140555164080640 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164080640_med [label="gini = 0.0000
 samples = 11
 value = [11]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584064 -> leaf_140179580584064_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580584064_high [label="gini = 0.0000
+	140555164080640 -> leaf_140555164080640_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164080640_high [label="gini = 0.0000
 samples = 9
 value = [9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584064 -> leaf_140179580584064_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580584064_low [label="gini = 0.0000
+	140555164080640 -> leaf_140555164080640_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164080640_low [label="gini = 0.0000
 samples = 9
 value = [9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584064 -> leaf_140179580584064_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580584064_vhigh [label="gini = 0.0000
+	140555164080640 -> leaf_140555164080640_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164080640_vhigh [label="gini = 0.0000
 samples = 8
 value = [8]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584064 -> leaf_140179580584064_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179580591104 [label="maint
+	140555164080640 -> leaf_140555164080640_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164075904 [label="maint
 gini = 0.5000
 samples = 38
 value = [19, 19]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584704 -> 140179580591104 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580591104_high [label="gini = 0.0000
+	140555164075136 -> 140555164075904 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164075904_high [label="gini = 0.0000
 samples = 11
 value = [11]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591104 -> leaf_140179580591104_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580591104_low [label="gini = 0.0000
+	140555164075904 -> leaf_140555164075904_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164075904_low [label="gini = 0.0000
 samples = 9
 value = [9]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591104 -> leaf_140179580591104_low [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580591104_med [label="gini = 0.0000
+	140555164075904 -> leaf_140555164075904_low [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164075904_med [label="gini = 0.0000
 samples = 10
 value = [10]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591104 -> leaf_140179580591104_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580591104_vhigh [label="gini = 0.0000
+	140555164075904 -> leaf_140555164075904_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164075904_vhigh [label="gini = 0.0000
 samples = 8
 value = [8]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591104 -> leaf_140179580591104_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179580594816 [label="maint
+	140555164075904 -> leaf_140555164075904_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164163328 [label="maint
 gini = 0.6620
 samples = 36
 value = [13, 10, 13]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580584704 -> 140179580594816 [label=low fontname=Helvetica fontsize=10]
-	140179580598400 [label="lug_boot
+	140555164075136 -> 140555164163328 [label=low fontname=Helvetica fontsize=10]
+	140555164160064 [label="lug_boot
 gini = 0.4959
 samples = 11
 value = [6, 5]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594816 -> 140179580598400 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580598400_med [label="gini = 0.5000
+	140555164163328 -> 140555164160064 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164160064_med [label="gini = 0.5000
 samples = 4
 value = [2, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580598400 -> leaf_140179580598400_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580598400_big [label="gini = 0.0000
+	140555164160064 -> leaf_140555164160064_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164160064_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580598400 -> leaf_140179580598400_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580598400_small [label="gini = 0.0000
+	140555164160064 -> leaf_140555164160064_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164160064_small [label="gini = 0.0000
 samples = 4
 value = [4]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580598400 -> leaf_140179580598400_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580594816_vhigh [label="gini = 0.0000
+	140555164160064 -> leaf_140555164160064_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164163328_vhigh [label="gini = 0.0000
 samples = 8
 value = [8]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594816 -> leaf_140179580594816_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179580597952 [label="lug_boot
+	140555164163328 -> leaf_140555164163328_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164162752 [label="lug_boot
 gini = 0.4938
 samples = 9
 value = [5, 4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594816 -> 140179580597952 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580597952_big [label="gini = 0.0000
+	140555164163328 -> 140555164162752 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164162752_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597952 -> leaf_140179580597952_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580597952_small [label="gini = 0.0000
+	140555164162752 -> leaf_140555164162752_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164162752_small [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597952 -> leaf_140179580597952_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580597952_med [label="gini = 0.4444
+	140555164162752 -> leaf_140555164162752_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164162752_med [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597952 -> leaf_140179580597952_med [label=med fontname=Helvetica fontsize=10]
-	140179580592512 [label="lug_boot
+	140555164162752 -> leaf_140555164162752_med [label=med fontname=Helvetica fontsize=10]
+	140555164158976 [label="lug_boot
 gini = 0.5000
 samples = 8
 value = [4, 4]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580594816 -> 140179580592512 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580592512_big [label="gini = 0.0000
+	140555164163328 -> 140555164158976 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164158976_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592512 -> leaf_140179580592512_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580592512_small [label="gini = 0.0000
+	140555164158976 -> leaf_140555164158976_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164158976_small [label="gini = 0.0000
 samples = 2
 value = [2]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592512 -> leaf_140179580592512_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580592512_med [label="gini = 0.4444
+	140555164158976 -> leaf_140555164158976_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164158976_med [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580592512 -> leaf_140179580592512_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179588079488_2 [label="gini = 0.0000
+	140555164158976 -> leaf_140555164158976_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555143838528_2 [label="gini = 0.0000
 samples = 157
 value = [157]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588079488 -> leaf_140179588079488_2 [label=2 fontname=Helvetica fontsize=10]
-	140179580595136 [label="buying
+	140555143838528 -> leaf_140555143838528_2 [label=2 fontname=Helvetica fontsize=10]
+	140555164161792 [label="buying
 gini = 0.6535
 samples = 163
 value = [79, 10, 45, 29]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179588079488 -> 140179580595136 [label=more fontname=Helvetica fontsize=10]
-	140179580597056 [label="maint
+	140555143838528 -> 140555164161792 [label=more fontname=Helvetica fontsize=10]
+	140555164162688 [label="maint
 gini = 0.4392
 samples = 43
 value = [29, 14]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595136 -> 140179580597056 [label=high fontname=Helvetica fontsize=10]
-	140179580591232 [label="doors
+	140555164161792 -> 140555164162688 [label=high fontname=Helvetica fontsize=10]
+	140555164075072 [label="doors
 gini = 0.1653
 samples = 11
 value = [10, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597056 -> 140179580591232 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580591232_3 [label="gini = 0.0000
+	140555164162688 -> 140555164075072 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164075072_3 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591232 -> leaf_140179580591232_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179580591232_5more [label="gini = 0.0000
+	140555164075072 -> leaf_140555164075072_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164075072_5more [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591232 -> leaf_140179580591232_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580591232_2 [label="gini = 0.4444
+	140555164075072 -> leaf_140555164075072_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164075072_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591232 -> leaf_140179580591232_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580591232_4 [label="gini = 0.0000
+	140555164075072 -> leaf_140555164075072_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164075072_4 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580591232 -> leaf_140179580591232_4 [label=4 fontname=Helvetica fontsize=10]
-	140179580588224 [label="doors
+	140555164075072 -> leaf_140555164075072_4 [label=4 fontname=Helvetica fontsize=10]
+	140555164164800 [label="doors
 gini = 0.1653
 samples = 11
 value = [10, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597056 -> 140179580588224 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580588224_5more [label="gini = 0.0000
+	140555164162688 -> 140555164164800 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164164800_5more [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588224 -> leaf_140179580588224_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580588224_2 [label="gini = 0.4444
+	140555164164800 -> leaf_140555164164800_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164164800_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588224 -> leaf_140179580588224_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580588224_3 [label="gini = 0.0000
+	140555164164800 -> leaf_140555164164800_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164164800_3 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588224 -> leaf_140179580588224_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179580588224_4 [label="gini = 0.0000
+	140555164164800 -> leaf_140555164164800_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164164800_4 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580588224 -> leaf_140179580588224_4 [label=4 fontname=Helvetica fontsize=10]
-	140179601572608 [label="doors
+	140555164164800 -> leaf_140555164164800_4 [label=4 fontname=Helvetica fontsize=10]
+	140555164164544 [label="doors
 gini = 0.1800
 samples = 10
 value = [9, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597056 -> 140179601572608 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179601572608_4 [label="gini = 0.0000
+	140555164162688 -> 140555164164544 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164164544_4 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572608 -> leaf_140179601572608_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179601572608_2 [label="gini = 0.4444
+	140555164164544 -> leaf_140555164164544_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164164544_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572608 -> leaf_140179601572608_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179601572608_3 [label="gini = 0.0000
+	140555164164544 -> leaf_140555164164544_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164164544_3 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572608 -> leaf_140179601572608_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179601572608_5more [label="gini = 0.0000
+	140555164164544 -> leaf_140555164164544_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164164544_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572608 -> leaf_140179601572608_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580597056_vhigh [label="gini = 0.0000
+	140555164164544 -> leaf_140555164164544_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164162688_vhigh [label="gini = 0.0000
 samples = 11
 value = [11]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597056 -> leaf_140179580597056_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	140179579826304 [label="maint
+	140555164162688 -> leaf_140555164162688_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	140555164156608 [label="maint
 gini = 0.6141
 samples = 39
 value = [21, 3, 4, 11]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595136 -> 140179579826304 [label=med fontname=Helvetica fontsize=10]
-	140179580589120 [label="lug_boot
+	140555164161792 -> 140555164156608 [label=med fontname=Helvetica fontsize=10]
+	140555164163776 [label="lug_boot
 gini = 0.1975
 samples = 9
 value = [8, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179579826304 -> 140179580589120 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580589120_med [label="gini = 0.0000
+	140555164156608 -> 140555164163776 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164163776_med [label="gini = 0.0000
 samples = 4
 value = [4]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589120 -> leaf_140179580589120_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580589120_big [label="gini = 0.0000
+	140555164163776 -> leaf_140555164163776_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164163776_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589120 -> leaf_140179580589120_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580589120_small [label="gini = 0.5000
+	140555164163776 -> leaf_140555164163776_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164163776_small [label="gini = 0.5000
 samples = 2
 value = [1, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580589120 -> leaf_140179580589120_small [label=small fontname=Helvetica fontsize=10]
-	140179580600256 [label="lug_boot
+	140555164163776 -> leaf_140555164163776_small [label=small fontname=Helvetica fontsize=10]
+	140555164164672 [label="lug_boot
 gini = 0.5679
 samples = 9
 value = [3, 1, 5]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179579826304 -> 140179580600256 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580600256_small [label="gini = 0.4444
+	140555164156608 -> 140555164164672 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164164672_small [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580600256 -> leaf_140179580600256_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580600256_med [label="gini = 0.4444
+	140555164164672 -> leaf_140555164164672_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164164672_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580600256 -> leaf_140179580600256_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580600256_big [label="gini = 0.0000
+	140555164164672 -> leaf_140555164164672_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164164672_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580600256 -> leaf_140179580600256_big [label=big fontname=Helvetica fontsize=10]
-	140179580597824 [label="doors
+	140555164164672 -> leaf_140555164164672_big [label=big fontname=Helvetica fontsize=10]
+	140555164161408 [label="doors
 gini = 0.1800
 samples = 10
 value = [9, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179579826304 -> 140179580597824 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580597824_2 [label="gini = 0.4444
+	140555164156608 -> 140555164161408 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164161408_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597824 -> leaf_140179580597824_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580597824_5more [label="gini = 0.0000
+	140555164161408 -> leaf_140555164161408_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164161408_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597824 -> leaf_140179580597824_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580597824_4 [label="gini = 0.0000
+	140555164161408 -> leaf_140555164161408_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164161408_4 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597824 -> leaf_140179580597824_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179580597824_3 [label="gini = 0.0000
+	140555164161408 -> leaf_140555164161408_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164161408_3 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597824 -> leaf_140179580597824_3 [label=3 fontname=Helvetica fontsize=10]
-	140179580596288 [label="lug_boot
+	140555164161408 -> leaf_140555164161408_3 [label=3 fontname=Helvetica fontsize=10]
+	140555164166848 [label="lug_boot
 gini = 0.5620
 samples = 11
 value = [4, 1, 6]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179579826304 -> 140179580596288 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580596288_big [label="gini = 0.0000
+	140555164156608 -> 140555164166848 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164166848_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596288 -> leaf_140179580596288_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580596288_small [label="gini = 0.3750
+	140555164166848 -> leaf_140555164166848_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164166848_small [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596288 -> leaf_140179580596288_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580596288_med [label="gini = 0.4444
+	140555164166848 -> leaf_140555164166848_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164166848_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596288 -> leaf_140179580596288_med [label=med fontname=Helvetica fontsize=10]
-	140179580595648 [label="maint
+	140555164166848 -> leaf_140555164166848_med [label=med fontname=Helvetica fontsize=10]
+	140555164159616 [label="maint
 gini = 0.6812
 samples = 40
 value = [11, 7, 4, 18]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595136 -> 140179580595648 [label=low fontname=Helvetica fontsize=10]
-	140179580597120 [label="lug_boot
+	140555164161792 -> 140555164159616 [label=low fontname=Helvetica fontsize=10]
+	140555164165696 [label="lug_boot
 gini = 0.5800
 samples = 10
 value = [4, 1, 5]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595648 -> 140179580597120 [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580597120_big [label="gini = 0.0000
+	140555164159616 -> 140555164165696 [label=high fontname=Helvetica fontsize=10]
+	leaf_140555164165696_big [label="gini = 0.0000
 samples = 3
 value = [3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597120 -> leaf_140179580597120_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580597120_med [label="gini = 0.4444
+	140555164165696 -> leaf_140555164165696_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164165696_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597120 -> leaf_140179580597120_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179580597120_small [label="gini = 0.3750
+	140555164165696 -> leaf_140555164165696_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164165696_small [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597120 -> leaf_140179580597120_small [label=small fontname=Helvetica fontsize=10]
-	140179580596352 [label="lug_boot
+	140555164165696 -> leaf_140555164165696_small [label=small fontname=Helvetica fontsize=10]
+	140555164159552 [label="lug_boot
 gini = 0.5124
 samples = 11
 value = [3, 1, 7]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595648 -> 140179580596352 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580596352_big [label="gini = 0.0000
+	140555164159616 -> 140555164159552 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164159552_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596352 -> leaf_140179580596352_big [label=big fontname=Helvetica fontsize=10]
-	leaf_140179580596352_small [label="gini = 0.4444
+	140555164159552 -> leaf_140555164159552_big [label=big fontname=Helvetica fontsize=10]
+	leaf_140555164159552_small [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596352 -> leaf_140179580596352_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179580596352_med [label="gini = 0.3750
+	140555164159552 -> leaf_140555164159552_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164159552_med [label="gini = 0.3750
 samples = 4
 value = [1, 3]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596352 -> leaf_140179580596352_med [label=med fontname=Helvetica fontsize=10]
-	140179580596224 [label="doors
+	140555164159552 -> leaf_140555164159552_med [label=med fontname=Helvetica fontsize=10]
+	140555164161728 [label="doors
 gini = 0.2188
 samples = 8
 value = [7, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595648 -> 140179580596224 [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179580596224_4 [label="gini = 0.0000
+	140555164159616 -> 140555164161728 [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164161728_4 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596224 -> leaf_140179580596224_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179580596224_2 [label="gini = 0.4444
+	140555164161728 -> leaf_140555164161728_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164161728_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596224 -> leaf_140179580596224_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580596224_3 [label="gini = 0.0000
+	140555164161728 -> leaf_140555164161728_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164161728_3 [label="gini = 0.0000
 samples = 1
 value = [1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596224 -> leaf_140179580596224_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179580596224_5more [label="gini = 0.0000
+	140555164161728 -> leaf_140555164161728_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164161728_5more [label="gini = 0.0000
 samples = 1
 value = [1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580596224 -> leaf_140179580596224_5more [label="5more" fontname=Helvetica fontsize=10]
-	140179601573504 [label="lug_boot
+	140555164161728 -> leaf_140555164161728_5more [label="5more" fontname=Helvetica fontsize=10]
+	140555164166400 [label="lug_boot
 gini = 0.5620
 samples = 11
 value = [4, 1, 6]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595648 -> 140179601573504 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179601573504_small [label="gini = 0.3750
+	140555164159616 -> 140555164166400 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164166400_small [label="gini = 0.3750
 samples = 4
 value = [3, 1]
 class = good" fillcolor="#90EE90" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601573504 -> leaf_140179601573504_small [label=small fontname=Helvetica fontsize=10]
-	leaf_140179601573504_med [label="gini = 0.4444
+	140555164166400 -> leaf_140555164166400_small [label=small fontname=Helvetica fontsize=10]
+	leaf_140555164166400_med [label="gini = 0.4444
 samples = 3
 value = [1, 2]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601573504 -> leaf_140179601573504_med [label=med fontname=Helvetica fontsize=10]
-	leaf_140179601573504_big [label="gini = 0.0000
+	140555164166400 -> leaf_140555164166400_med [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164166400_big [label="gini = 0.0000
 samples = 4
 value = [4]
 class = vgood" fillcolor="#24F224" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601573504 -> leaf_140179601573504_big [label=big fontname=Helvetica fontsize=10]
-	140179601574464 [label="maint
+	140555164166400 -> leaf_140555164166400_big [label=big fontname=Helvetica fontsize=10]
+	140555164160960 [label="maint
 gini = 0.4926
 samples = 41
 value = [18, 23]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580595136 -> 140179601574464 [label=vhigh fontname=Helvetica fontsize=10]
-	140179580597504 [label="doors
+	140555164161792 -> 140555164160960 [label=vhigh fontname=Helvetica fontsize=10]
+	140555164165632 [label="doors
 gini = 0.1800
 samples = 10
 value = [9, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601574464 -> 140179580597504 [label=low fontname=Helvetica fontsize=10]
-	leaf_140179580597504_4 [label="gini = 0.0000
+	140555164160960 -> 140555164165632 [label=low fontname=Helvetica fontsize=10]
+	leaf_140555164165632_4 [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597504 -> leaf_140179580597504_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179580597504_2 [label="gini = 0.4444
+	140555164165632 -> leaf_140555164165632_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164165632_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597504 -> leaf_140179580597504_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179580597504_5more [label="gini = 0.0000
+	140555164165632 -> leaf_140555164165632_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164165632_5more [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597504 -> leaf_140179580597504_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179580597504_3 [label="gini = 0.0000
+	140555164165632 -> leaf_140555164165632_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164165632_3 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580597504 -> leaf_140179580597504_3 [label=3 fontname=Helvetica fontsize=10]
-	140179601572096 [label="doors
+	140555164165632 -> leaf_140555164165632_3 [label=3 fontname=Helvetica fontsize=10]
+	140555164158016 [label="doors
 gini = 0.1800
 samples = 10
 value = [9, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601574464 -> 140179601572096 [label=med fontname=Helvetica fontsize=10]
-	leaf_140179601572096_5more [label="gini = 0.0000
+	140555164160960 -> 140555164158016 [label=med fontname=Helvetica fontsize=10]
+	leaf_140555164158016_5more [label="gini = 0.0000
 samples = 3
 value = [3]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572096 -> leaf_140179601572096_5more [label="5more" fontname=Helvetica fontsize=10]
-	leaf_140179601572096_2 [label="gini = 0.4444
+	140555164158016 -> leaf_140555164158016_5more [label="5more" fontname=Helvetica fontsize=10]
+	leaf_140555164158016_2 [label="gini = 0.4444
 samples = 3
 value = [2, 1]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572096 -> leaf_140179601572096_2 [label=2 fontname=Helvetica fontsize=10]
-	leaf_140179601572096_4 [label="gini = 0.0000
+	140555164158016 -> leaf_140555164158016_2 [label=2 fontname=Helvetica fontsize=10]
+	leaf_140555164158016_4 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572096 -> leaf_140179601572096_4 [label=4 fontname=Helvetica fontsize=10]
-	leaf_140179601572096_3 [label="gini = 0.0000
+	140555164158016 -> leaf_140555164158016_4 [label=4 fontname=Helvetica fontsize=10]
+	leaf_140555164158016_3 [label="gini = 0.0000
 samples = 2
 value = [2]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601572096 -> leaf_140179601572096_3 [label=3 fontname=Helvetica fontsize=10]
-	leaf_140179601574464_vhigh [label="gini = 0.0000
+	140555164158016 -> leaf_140555164158016_3 [label=3 fontname=Helvetica fontsize=10]
+	leaf_140555164160960_vhigh [label="gini = 0.0000
 samples = 9
 value = [9]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601574464 -> leaf_140179601574464_vhigh [label=vhigh fontname=Helvetica fontsize=10]
-	leaf_140179601574464_high [label="gini = 0.0000
+	140555164160960 -> leaf_140555164160960_vhigh [label=vhigh fontname=Helvetica fontsize=10]
+	leaf_140555164160960_high [label="gini = 0.0000
 samples = 12
 value = [12]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179601574464 -> leaf_140179601574464_high [label=high fontname=Helvetica fontsize=10]
-	leaf_140179580545600_low [label="gini = 0.0000
+	140555164160960 -> leaf_140555164160960_high [label=high fontname=Helvetica fontsize=10]
+	leaf_140555142110912_low [label="gini = 0.0000
 samples = 465
 value = [465]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140179580545600 -> leaf_140179580545600_low [label=low fontname=Helvetica fontsize=10]
+	140555142110912 -> leaf_140555142110912_low [label=low fontname=Helvetica fontsize=10]
 }
