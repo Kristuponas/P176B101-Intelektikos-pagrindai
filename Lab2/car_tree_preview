@@ -1,89 +1,89 @@
 digraph {
 	graph [rankdir=TB]
-	140555142110912 [label="safety
+	140717362673600 [label="safety
 gini = 0.4570
 samples = 1382
 value = [307, 55, 968, 52]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555164134464 [label="persons
+	140717332027648 [label="persons
 gini = 0.5174
 samples = 447
 value = [143, 30, 274]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555142110912 -> 140555164134464 [label=med fontname=Helvetica fontsize=10]
-	140555173940800 [label="buying
+	140717362673600 -> 140717332027648 [label=med fontname=Helvetica fontsize=10]
+	140717362664256 [label="buying
 gini = 0.5696
 samples = 150
 value = [72, 12, 66]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555164134464 -> 140555173940800 [label=4 fontname=Helvetica fontsize=10]
-	trunc_140555173940800_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555173940800 -> trunc_140555173940800_med [label=med fontsize=10]
-	trunc_140555173940800_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555173940800 -> trunc_140555173940800_high [label=high fontsize=10]
-	trunc_140555173940800_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555173940800 -> trunc_140555173940800_vhigh [label=vhigh fontsize=10]
-	trunc_140555173940800_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555173940800 -> trunc_140555173940800_low [label=low fontsize=10]
-	leaf_140555164134464_2 [label="gini = 0.0000
+	140717332027648 -> 140717362664256 [label=4 fontname=Helvetica fontsize=10]
+	trunc_140717362664256_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717362664256 -> trunc_140717362664256_med [label=med fontsize=10]
+	trunc_140717362664256_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717362664256 -> trunc_140717362664256_high [label=high fontsize=10]
+	trunc_140717362664256_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717362664256 -> trunc_140717362664256_vhigh [label=vhigh fontsize=10]
+	trunc_140717362664256_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717362664256 -> trunc_140717362664256_low [label=low fontsize=10]
+	leaf_140717332027648_2 [label="gini = 0.0000
 samples = 145
 value = [145]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555164134464 -> leaf_140555164134464_2 [label=2 fontname=Helvetica fontsize=10]
-	140555164090240 [label="lug_boot
+	140717332027648 -> leaf_140717332027648_2 [label=2 fontname=Helvetica fontsize=10]
+	140717332162432 [label="lug_boot
 gini = 0.5960
 samples = 152
 value = [71, 18, 63]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555164134464 -> 140555164090240 [label=more fontname=Helvetica fontsize=10]
-	trunc_140555164090240_small [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164090240 -> trunc_140555164090240_small [label=small fontsize=10]
-	trunc_140555164090240_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164090240 -> trunc_140555164090240_med [label=med fontsize=10]
-	trunc_140555164090240_big [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164090240 -> trunc_140555164090240_big [label=big fontsize=10]
-	140555143838528 [label="persons
+	140717332027648 -> 140717332162432 [label=more fontname=Helvetica fontsize=10]
+	trunc_140717332162432_small [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332162432 -> trunc_140717332162432_small [label=small fontsize=10]
+	trunc_140717332162432_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332162432 -> trunc_140717332162432_med [label=med fontsize=10]
+	trunc_140717332162432_big [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332162432 -> trunc_140717332162432_big [label=big fontsize=10]
+	140717332063872 [label="persons
 gini = 0.6258
 samples = 470
 value = [164, 25, 229, 52]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555142110912 -> 140555143838528 [label=high fontname=Helvetica fontsize=10]
-	140555164075136 [label="buying
+	140717362673600 -> 140717332063872 [label=high fontname=Helvetica fontsize=10]
+	140717332159040 [label="buying
 gini = 0.6130
 samples = 150
 value = [85, 15, 27, 23]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555143838528 -> 140555164075136 [label=4 fontname=Helvetica fontsize=10]
-	trunc_140555164075136_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164075136 -> trunc_140555164075136_med [label=med fontsize=10]
-	trunc_140555164075136_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164075136 -> trunc_140555164075136_high [label=high fontsize=10]
-	trunc_140555164075136_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164075136 -> trunc_140555164075136_vhigh [label=vhigh fontsize=10]
-	trunc_140555164075136_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164075136 -> trunc_140555164075136_low [label=low fontsize=10]
-	leaf_140555143838528_2 [label="gini = 0.0000
+	140717332063872 -> 140717332159040 [label=4 fontname=Helvetica fontsize=10]
+	trunc_140717332159040_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332159040 -> trunc_140717332159040_med [label=med fontsize=10]
+	trunc_140717332159040_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332159040 -> trunc_140717332159040_high [label=high fontsize=10]
+	trunc_140717332159040_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332159040 -> trunc_140717332159040_vhigh [label=vhigh fontsize=10]
+	trunc_140717332159040_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717332159040 -> trunc_140717332159040_low [label=low fontsize=10]
+	leaf_140717332063872_2 [label="gini = 0.0000
 samples = 157
 value = [157]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555143838528 -> leaf_140555143838528_2 [label=2 fontname=Helvetica fontsize=10]
-	140555164161792 [label="buying
+	140717332063872 -> leaf_140717332063872_2 [label=2 fontname=Helvetica fontsize=10]
+	140717353207552 [label="buying
 gini = 0.6535
 samples = 163
 value = [79, 10, 45, 29]
 class = acc" fillcolor="#87CEEB" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555143838528 -> 140555164161792 [label=more fontname=Helvetica fontsize=10]
-	trunc_140555164161792_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164161792 -> trunc_140555164161792_high [label=high fontsize=10]
-	trunc_140555164161792_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164161792 -> trunc_140555164161792_med [label=med fontsize=10]
-	trunc_140555164161792_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164161792 -> trunc_140555164161792_low [label=low fontsize=10]
-	trunc_140555164161792_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
-	140555164161792 -> trunc_140555164161792_vhigh [label=vhigh fontsize=10]
-	leaf_140555142110912_low [label="gini = 0.0000
+	140717332063872 -> 140717353207552 [label=more fontname=Helvetica fontsize=10]
+	trunc_140717353207552_high [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717353207552 -> trunc_140717353207552_high [label=high fontsize=10]
+	trunc_140717353207552_med [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717353207552 -> trunc_140717353207552_med [label=med fontsize=10]
+	trunc_140717353207552_low [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717353207552 -> trunc_140717353207552_low [label=low fontsize=10]
+	trunc_140717353207552_vhigh [label="..." fillcolor=lightgray fontname=Helvetica shape=ellipse style=filled]
+	140717353207552 -> trunc_140717353207552_vhigh [label=vhigh fontsize=10]
+	leaf_140717362673600_low [label="gini = 0.0000
 samples = 465
 value = [465]
 class = unacc" fillcolor="#F4A460" fontname=Helvetica fontsize=11 shape=box style="filled,rounded"]
-	140555142110912 -> leaf_140555142110912_low [label=low fontname=Helvetica fontsize=10]
+	140717362673600 -> leaf_140717362673600_low [label=low fontname=Helvetica fontsize=10]
 }

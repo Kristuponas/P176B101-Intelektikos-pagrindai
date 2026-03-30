@@ -1,234 +1,21 @@
 import pandas as pd
-import math
-import graphviz
-import numpy as np
-import seaborn as sns
+import time
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+
+from sklearn.ensemble import RandomForestClassifier   
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.tree import DecisionTreeClassifier 
+from sklearn.preprocessing import OrdinalEncoder
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 
 # -----------------------------------------
-#                 METHODS
-# -----------------------------------------
-
-# Gini Index calculation
-def gini_index(data, label):
-    counts = data[label].value_counts()
-    total = len(data)
-    gini = 1.0
-
-    for value in counts:
-        prob = value / total
-        gini -= prob ** 2
-
-    return gini
-
-# Entropy calculation
-def entropy(data, label):
-    counts = data[label].value_counts()
-
-    total = len(data)
-    entropy = 0
-
-    for value in counts:
-        prob = value / total
-        entropy = entropy - prob * np.log2(prob)
-
-    return entropy
-
-# information gain calculation
-def cal_info_gain(data, method, label):
-    if method == 'entropy':
-        base_value = entropy(data, label)
-    elif method == 'gini':
-        base_value = gini_index(data, label)
-
-    total = len(data)
-    info_gain = []
-
-    for column in data.columns[:-1]:
-        attribute_values = data[column].unique()
-        new_value = 0.0
-
-        for value in attribute_values:
-            subset = data[data[column] == value]
-            prob = len(subset)/ total
-
-            if method == 'entropy':
-                new_value += prob * entropy(subset, label)
-            elif method == 'gini':
-                new_value += prob * gini_index(subset, label)
-
-        info_gain.append([column, base_value - new_value])
-
-    return info_gain
-
-def build_tree_ID3(data, method, label, root=None, max_depth=None, depth=0):
-    if max_depth and depth >= max_depth:
-        count = data[label].value_counts()
-        return count.idxmax()
-    
-    info_gain = cal_info_gain(data, method, label)
-    info_gain = sorted(info_gain, key=lambda x: x[1], reverse=True)
-    column_name = info_gain[0][0]
-
-    root = {column_name: {}}
-
-    for attr in data[column_name].unique():
-        new_data = data[data[column_name] == attr]
-        new_data = new_data.drop(column_name, axis=1)
-
-        if len(new_data.columns) < 2:
-            count = new_data[label].value_counts()
-            count = count.sort_values(ascending=False)
-            root[column_name][attr] = count.index[0]
-
-        elif len(new_data) > 1 and len(new_data[label].unique()) > 1:
-            new = build_tree_ID3(new_data, method, label, root, max_depth, depth + 1)
-            root[column_name][attr] = new
-        
-        else:
-            output = new_data[label].unique()
-            root[column_name][attr] = output[0]
-    
-    return root
-
-def predict_decision_tree(data_point, decision_tree, default_prediction=None):
-    node = decision_tree
-    
-    while isinstance(node, dict):
-        feature = list(node.keys())[0]
-        value = data_point[feature]
-        
-        if value is None:
-            return default_prediction
-        
-        try:
-            node = node[feature][value]
-        except KeyError:
-            return default_prediction
-        
-    return node
-
-def plot_matrix(matrix):
-    labels = [False, True]
-    sns.heatmap(matrix, annot = True, fmt="d", cmap='Greens', xticklabels = labels, yticklabels = labels)
-    plt.xlabel('Prediction')
-    plt.ylabel('Ground Truth')
-    plt.show()
-
-def generate_report(data, tree, label):
-    predictions = []
-    actual = data[label].astype(str)
-    default_prediction = data[label].mode()[0]
-
-    for _, row in data.iterrows():
-        row = row.drop(label, axis = 0)
-        pre = predict_decision_tree(row, tree, default_prediction)
-        predictions.append(str(pre))
-
-    report = classification_report(actual, predictions, zero_division=0)
-    matrix = confusion_matrix(actual, predictions)
-
-    return report, matrix
-
-def visualize_tree(tree, data, label, graph=None, parent=None, 
-                   edge_label='', max_depth=None, depth=0):
-    if graph is None:
-        graph = graphviz.Digraph(graph_attr={
-            'rankdir': 'TB'
-        })
-    
-    class_colors = {
-        'unacc':  '#F4A460',
-        'acc':    '#87CEEB', 
-        'good':   '#90EE90',
-        'vgood':  "#24F224"
-    }
-
-    def get_node_info(subset, label):
-        total = len(subset)
-        counts = subset[label].value_counts()
-        majority = counts.idxmax()
-
-        # Gini
-        gini = 1.0
-        for c in counts:
-            gini -= (c / total) ** 2
-
-        dist = [int(counts.get(c, 0)) for c in sorted(subset[label].unique())]
-        return total, gini, majority, dist
-
-    if max_depth is not None and depth >= max_depth:
-        node_id = f'trunc_{parent}_{edge_label}'
-        graph.node(node_id, label='...', shape='ellipse',
-                   style='filled', fillcolor='lightgray',
-                   fontname='Helvetica')
-        if parent is not None:
-            graph.edge(parent, node_id, label=edge_label, fontsize='10')
-        return graph
-
-    if isinstance(tree, dict):
-        feature = list(tree.keys())[0]
-        node_id = str(id(tree))
-
-        total, gini, majority, dist = get_node_info(data, label)
-        color = class_colors.get(majority, '#87CEEB')
-
-        node_label = (
-            f"{feature}\n"
-            f"gini = {gini:.4f}\n"
-            f"samples = {total}\n"
-            f"value = {dist}\n"
-            f"class = {majority}"
-        )
-
-        graph.node(node_id, label=node_label,
-                   shape='box', style='filled,rounded',
-                   fillcolor=color, fontname='Helvetica', fontsize='11')
-
-        if parent is not None:
-            graph.edge(parent, node_id, label=edge_label,
-                       fontsize='10', fontname='Helvetica')
-
-        for value, subtree in tree[feature].items():
-            subset = data[data[feature] == value]
-            visualize_tree(subtree, subset, label, graph,
-                          parent=node_id, edge_label=str(value),
-                          max_depth=max_depth, depth=depth + 1)
-
-    else:
-        # Leaf node
-        leaf_id = f'leaf_{parent}_{edge_label}'
-        total, gini, majority, dist = get_node_info(data, label)
-        color = class_colors.get(str(tree), 'white')
-
-        leaf_label = (
-            f"gini = {gini:.4f}\n"
-            f"samples = {total}\n"
-            f"value = {dist}\n"
-            f"class = {tree}"
-        )
-
-        graph.node(leaf_id, label=leaf_label,
-                   shape='box', style='filled,rounded',
-                   fillcolor=color, fontname='Helvetica', fontsize='11')
-
-        if parent is not None:
-            graph.edge(parent, leaf_id, label=edge_label,
-                       fontsize='10', fontname='Helvetica')
-
-    return graph
-
-# -----------------------------------------
-#                MAIN PROCESS
+# 1. DUOMENŲ RINKINYS
 # -----------------------------------------
 
 # Dataset: https://archive.ics.uci.edu/dataset/19/car+evaluation
+
 '''
     Ataskaitai:
 
@@ -253,78 +40,215 @@ def visualize_tree(tree, data, label, graph=None, parent=None,
     Klase yra disbalansuota, daugiausia netinkamu automobiliu, todel butent sita
     klase bus geriausiai atpazystama.
 '''
+
 df = pd.read_csv('car.data', header=None, names=[
     'buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class'
 ])
-print('df.head():\n')
+
+print('Duomenų pirmos eilutės:\n')
 print(df.head())
 
-print('\nClass distribution:\n')
+print('\nKlasių pasiskirstymas:\n')
 print(df['class'].value_counts())
 
-# Split data into training and testing subsets (80% training, 20% testing)
-train_df, test_df = train_test_split(df, test_size=0.2, 
-                                      random_state=42, 
-                                      stratify=df['class'])
+print('\nTrūkstamos reikšmės:\n')
+print(df.isnull().sum())
 
-print('\nTraining set class distribution:\n')
-print(train_df['class'].value_counts())
+# -----------------------------------------
+# 2. PROGNOZUOJAMAS ATRIBUTAS
+# -----------------------------------------
+# Prognozuojamas atributas: class
 
-# Calculate missing values
-missing_values = df.isnull().sum()
-print(f"\n{missing_values}\n")
+# -----------------------------------------
+# 3. TRAIN / TEST SKAIDYMAS
+# -----------------------------------------
 
-# One hot encoding
-scaler = StandardScaler()
-df_hot = pd.get_dummies(df)
-df_scaled = pd.DataFrame(scaler.fit_transform(df_hot), columns = df_hot.columns)
-df_hot.describe()
-print(df_scaled.head())
+X = df.drop('class', axis=1)
+y = df['class']
 
-# Correlation graphs
-corr = df_hot.corr()
-m = np.triu(corr)
-plt.figure(figsize = (12, 12))
-sns.heatmap(corr, annot = True, mask = m)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+
+print('\nApmokymo aibės klasių pasiskirstymas:\n')
+print(y_train.value_counts())
+
+print('\nTestavimo aibės klasių pasiskirstymas:\n')
+print(y_test.value_counts())
+
+# -----------------------------------------
+# 4. ĮVESTYS IR IŠVESTYS
+# -----------------------------------------
+
+print('\nX_train pirmos eilutės:\n')
+print(X_train.head())
+
+print('\ny_train pirmos reikšmės:\n')
+print(y_train.head())
+
+# -----------------------------------------
+# KATEGORINIŲ REIKŠMIŲ KODAVIMAS
+# -----------------------------------------
+
+enc = OrdinalEncoder()
+X_train_enc = enc.fit_transform(X_train)
+X_test_enc = enc.transform(X_test)
+
+classes = sorted(y.unique())
+
+# -----------------------------------------
+# 5. SPRENDIMŲ MEDŽIO SUDARYMAS
+# -----------------------------------------
+
+model = DecisionTreeClassifier(
+    criterion='entropy',
+    max_depth=5,
+    random_state=42
+)
+
+start = time.perf_counter()
+model.fit(X_train_enc, y_train)
+build_time = time.perf_counter() - start
+
+print(f'\nMedžio sudarymo laikas: {build_time:.6f} s')
+
+# -----------------------------------------
+# 6. GRAFINIS ATVAIZDAVIMAS
+# -----------------------------------------
+
+plt.figure(figsize=(24, 10))
+plot_tree(
+    model,
+    feature_names=X.columns,
+    class_names=classes,
+    filled=True,
+    rounded=True,
+    fontsize=8
+)
+plt.title('Sprendimų medis')
+plt.tight_layout()
+plt.savefig('car_tree_preview.png', dpi=150)
 plt.show()
 
-# Calculate information gain
-print("\nInformation Gain (Gini Index):\n")
-info_gain = cal_info_gain(df, 'gini', 'class')
-info_gain_sorted = sorted(info_gain, key=lambda x: x[1], reverse=True)
-for item in info_gain_sorted:
-    print(f"{item[0]:30s} {item[1]:.6f}")
+# -----------------------------------------
+# 7. TESTAVIMAS IR TIKSLUMAS
+# -----------------------------------------
 
+y_train_pred = model.predict(X_train_enc)
+y_test_pred = model.predict(X_test_enc)
+
+train_acc = accuracy_score(y_train, y_train_pred)
+test_acc = accuracy_score(y_test, y_test_pred)
+
+print('\nApmokymo accuracy:', round(train_acc, 4))
+print('Testavimo accuracy:', round(test_acc, 4))
+
+print('\nTestavimo classification report:\n')
+print(classification_report(y_test, y_test_pred, zero_division=0))
+
+cm = confusion_matrix(y_test, y_test_pred, labels=classes)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes)
+disp.plot(cmap='Greens')
+plt.title('Testavimo susimaišymo matrica')
+plt.tight_layout()
+plt.show()
+
+# -----------------------------------------
+# 8. EKSPERIMENTAS SU SKIRTINGAIS GYLIAIS
+# -----------------------------------------
 
 # Treniravimas
 '''
     Ataskaitai:
 
-    Kai gylis yra 5, modelis pasiekia geriausia tiksluma: treniravime 0.96, testavime 0.95.
-
-    Didesnis gylis nei 5 sukelia overfitting'a, kai gylis yra 6, treniravimo tikslumas yra 1.0, bet testavimo tikslumas krenta iki 0.90.
+    Kai gylis yra 12, modelis pasiekia geriausia tiksluma: treniravime 0.9978, testavime 0.9855.
+    Didesnis gylis nei 12 sukelia overfitting'a, kai gylis yra 13, treniravimo tikslumas yra 1.0, bet testavimo tikslumas krenta iki 0.9798.
 '''
 
-id3_tree = build_tree_ID3(train_df, 'gini', 'class', max_depth=5)
+depths = [5, 7, 9, 11, 12, 13]
+depth_results = []
 
-# Train report
-report, matrix = generate_report(train_df, id3_tree, 'class')
-print('\nTrain Report\n')
-print(report)
-plot_matrix(matrix)
+for d in depths:
+    model_d = DecisionTreeClassifier(
+        criterion='entropy',
+        max_depth=d,
+        random_state=42
+    )
 
-# Test report
-report, matrix = generate_report(test_df, id3_tree, 'class')
-print('\nTest Report\n')
-print(report)
-plot_matrix(matrix)
+    start = time.perf_counter()
+    model_d.fit(X_train_enc, y_train)
+    elapsed = time.perf_counter() - start
 
-# Visualize tree
-graph_full = visualize_tree(id3_tree, train_df, 'class')
-graph_full.render('car_tree_full', format='png', cleanup=True)
-graph_full.view()
+    y_train_pred_d = model_d.predict(X_train_enc)
+    y_test_pred_d = model_d.predict(X_test_enc)
 
-# Render readable fragment for report (first 3 levels)
-graph_preview = visualize_tree(id3_tree, train_df, 'class', max_depth=3)
-graph_preview.render('car_tree_preview', format='png', cleanup=True)
-graph_preview.view()
+    train_acc_d = accuracy_score(y_train, y_train_pred_d)
+    test_acc_d = accuracy_score(y_test, y_test_pred_d)
+
+    depth_results.append({
+        'depth': d,
+        'build_time': elapsed,
+        'train_acc': train_acc_d,
+        'test_acc': test_acc_d
+    })
+
+    print(f'gylis={d}  laikas={elapsed:.6f}s  apmokymas={train_acc_d:.4f}  testavimas={test_acc_d:.4f}')
+
+depth_df = pd.DataFrame(depth_results)
+
+best_depth = int(depth_df.loc[depth_df['test_acc'].idxmax(), 'depth'])
+print(f'\nGeriausias gylis pagal testavimo tikslumą: {best_depth}')
+
+fig, ax1 = plt.subplots(figsize=(8, 4))
+ax2 = ax1.twinx()
+
+ax1.plot(depth_df['depth'], depth_df['train_acc'], 'o-', label='Apmokymo tikslumas')
+ax1.plot(depth_df['depth'], depth_df['test_acc'], 's-', label='Testavimo tikslumas')
+ax2.bar(depth_df['depth'], depth_df['build_time'], alpha=0.25, label='Formavimo laikas (s)')
+
+ax1.set_xlabel('Maksimalus gylis')
+ax1.set_ylabel('Tikslumas')
+ax2.set_ylabel('Formavimo laikas (s)')
+ax1.set_xticks(depths)
+ax1.set_ylim(0.5, 1.05)
+
+lines1, labels1 = ax1.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+ax1.legend(lines1 + lines2, labels1 + labels2, loc='lower right')
+
+plt.title('Sprendimų medis — tikslumas ir formavimo laikas pagal gylį')
+plt.tight_layout()
+plt.savefig('depth_experiment.png', dpi=150)
+plt.show()
+
+# -----------------------------------------
+# 9. ATSITIKTINIS MIŠKAS (5 MEDŽIAI)
+# -----------------------------------------
+
+forest = RandomForestClassifier(
+    n_estimators=5,       # 5 medžiai
+    max_depth=best_depth, # tavo rastas geriausias gylis (12)
+    random_state=42
+)
+
+start = time.perf_counter()
+forest.fit(X_train_enc, y_train)
+forest_time = time.perf_counter() - start
+
+y_pred_forest = forest.predict(X_test_enc)
+
+forest_acc = accuracy_score(y_test, y_pred_forest)
+
+print('\n--- ATSITIKTINIS MIŠKAS ---')
+print(f'Miško sudarymo laikas: {forest_time:.6f} s')
+print(f'Miško tikslumas: {forest_acc:.4f}')
+
+print('\nClassification report:\n')
+print(classification_report(y_test, y_pred_forest, zero_division=0))
+
+cm_forest = confusion_matrix(y_test, y_pred_forest, labels=classes)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_forest, display_labels=classes)
+disp.plot(cmap='Blues')
+plt.title('Random Forest susimaišymo matrica')
+plt.tight_layout()
+plt.show()
