@@ -1,0 +1,114 @@
+Task_1_1.py:
+
+AR(2): P (313, 2), T (313,)
+
+Pu (200, 2) Tu (200,) | Pv (113, 2) Tv (113,)
+
+Gautos koeficientu reiksmes b = 13.4037,  w = [-0.6761  1.3715]
+
+MSE  train = 217.17  test = 386.40  all = 278.27
+MAD  train = 8.71  test = 10.77  all = 9.22
+
+----------------------------------------------------------------------------------
+
+Task_1_2.py:
+
+AR(2): P (313, 2), T (313,)
+
+Pu (200, 2) Tu (200,) | Pv (113, 2) Tv (113,)
+
+Gautos koeficientu reiksmes b = 13.4037,  w = [-0.6761  1.3715]
+
+MSE  train = 217.17  test = 386.40  all = 278.27
+MAD  train = 8.71  test = 10.77  all = 9.22
+
+Neurono svoriai:  b = 0.4789,  w = [-0.583   1.4659]
+
+Galutinis MSE = 277.14  (goal 250.0)
+
+Palyginimas su 9 zingsnio rezultatais:  b = 13.4037,  w = [-0.6761  1.3715]
+
+Neurono MSE  train = 277.14  test = 486.69
+Neurono MAD  train = 8.46  test = 12.73
+
+Rezultatai:
+  lr =    1e-06 -> final MSE = 473.08
+  lr =    5e-06 -> final MSE = 286.84
+  lr =    1e-05 -> final MSE = 280.75
+  lr =    5e-05 -> final MSE = 277.14
+  lr =   0.0001 -> final MSE = 272.99
+  lr =   0.0002 -> final MSE = 265.53
+  lr =   0.0005 -> final MSE = Divergavo
+  lr =    0.001 -> final MSE = Divergavo
+
+----------------------------------------------------------------------------------
+
+Task_2.py:
+
+shape:
+ (1800, 11)
+Dtypes:
+user_id                   int64
+day_type                    str
+work_hours              float64
+screen_time_hours       float64
+meetings_count            int64
+breaks_taken              int64
+after_hours_work          int64
+sleep_hours             float64
+task_completion_rate    float64
+burnout_score           float64
+burnout_risk                str
+dtype: object
+
+Missing values per column:
+user_id                 0
+day_type                0
+work_hours              0
+screen_time_hours       0
+meetings_count          0
+breaks_taken            0
+after_hours_work        0
+sleep_hours             0
+task_completion_rate    0
+burnout_score           0
+burnout_risk            0
+dtype: int64
+
+Class counts (burnout_risk):
+burnout_risk
+Low       1527
+Medium     253
+High        20
+Name: count, dtype: int64
+                 min     max        mean
+burnout_risk                            
+High          110.22  143.92  122.571000
+Low             2.50   69.92   36.340747
+Medium         70.01  109.99   84.087826
+
+Atributai: ['work_hours', 'screen_time_hours', 'meetings_count', 'breaks_taken', 'after_hours_work', 'sleep_hours', 'task_completion_rate', 'is_weekend']
+
+burnout_risk reiksmiu [low   medium   high] kiekis: [1527  253   20]
+Inverse-frequency class weights: [ 0.39292731  2.3715415  30.        ]
+
+=== E0 baseline ===
+   mean acc = 89.39% (±3.71),  macro F1 = 0.5113,  mean loss = 0.2948
+
+=== E1 std ===
+   mean acc = 95.39% (±0.56),  macro F1 = 0.6063,  mean loss = 0.1110
+
+=== E2 softmax ===
+   mean acc = 95.50% (±1.04),  macro F1 = 0.6075,  mean loss = 0.1167
+
+=== E3 relu ===
+   mean acc = 94.56% (±1.59),  macro F1 = 0.6118,  mean loss = 0.1924
+
+=== E4 relu_l2 ===
+   mean acc = 94.83% (±1.32),  macro F1 = 0.6211,  mean loss = 0.1580
+
+=== E5 class_w ===
+   mean acc = 94.11% (±1.41),  macro F1 = 0.6510,  mean loss = 4.2814
+Baseline (E0):    mean accuracy = 89.39%
+Best (E2): mean accuracy = 95.50%
+Improvement:      +6.11 pp
