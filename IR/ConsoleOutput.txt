@@ -1,0 +1,148 @@
+============================================================
+1. DUOMENŲ ĮKĖLIMAS IR VALYMAS
+============================================================
+Pradinis dydis: 13393 eilučių, 12 stulpelių
+Tolydžiai atributai: ['height_cm', 'weight_kg', 'body fat_%', 'diastolic', 'systolic', 'gripForce', 'sit and bend forward_cm', 'sit-ups counts', 'broad jump_cm']
+Kategoriniai (neįtraukiami): ['gender', 'class']
+  Pašalinta 1 neteisingų įrašų iš 'diastolic'
+  Pašalinta 3 neteisingų įrašų iš 'gripForce'
+  Pašalinta 654 neteisingų įrašų iš 'sit and bend forward_cm'
+  Pašalinta 9 neteisingų įrašų iš 'broad jump_cm'
+
+Ekstremalių reikšmių šalinimas (IQR metodas):
+  'height_cm': pašalinta 7 ekstremalių reikšmių
+  'weight_kg': pašalinta 69 ekstremalių reikšmių
+  'body fat_%': pašalinta 79 ekstremalių reikšmių
+  'diastolic': pašalinta 48 ekstremalių reikšmių
+  'systolic': pašalinta 19 ekstremalių reikšmių
+  'sit and bend forward_cm': pašalinta 16 ekstremalių reikšmių
+  'sit-ups counts': pašalinta 88 ekstremalių reikšmių
+  'broad jump_cm': pašalinta 18 ekstremalių reikšmių
+Iš viso pašalinta ekstremalių reikšmių: 344
+Galutinis dydis: 12382 eilučių
+Duomenys standartizuoti. Atributai (9): ['height_cm', 'weight_kg', 'body fat_%', 'diastolic', 'systolic', 'gripForce', 'sit and bend forward_cm', 'sit-ups counts', 'broad jump_cm']
+
+============================================================
+2. DVIEJŲ ATRIBUTŲ KLASTERIZAVIMAS
+============================================================
+Tikrinamos 36 atributų poros, k nuo 2 iki 8...
+
+Geriausios atributų poros (top 15 pagal max silueto koef.):
+ Nr | Atributų pora                                 | Best k | Max sil
+----------------------------------------------------------------------
+  1 | gripForce × broad jump_cm                     |      2 |  0.5532
+  2 | height_cm × gripForce                         |      2 |  0.5343
+  3 | weight_kg × gripForce                         |      2 |  0.5305
+  4 | height_cm × weight_kg                         |      2 |  0.5097
+  5 | height_cm × broad jump_cm                     |      2 |  0.5064
+  6 | weight_kg × broad jump_cm                     |      2 |  0.4945
+  7 | sit-ups counts × broad jump_cm                |      2 |  0.4822
+  8 | body fat_% × gripForce                        |      2 |  0.4782
+  9 | body fat_% × broad jump_cm                    |      2 |  0.4655
+ 10 | gripForce × sit-ups counts                    |      2 |  0.4649
+ 11 | diastolic × systolic                          |      2 |  0.4625
+ 12 | height_cm × body fat_%                        |      2 |  0.4461
+ 13 | height_cm × sit-ups counts                    |      2 |  0.4351
+ 14 | body fat_% × sit-ups counts                   |      2 |  0.4350
+ 15 | weight_kg × sit-ups counts                    |      2 |  0.4196
+
+Pilna lentelė išsaugota: lentele_2d.csv
+
+Kuriant grafikus top 3 poroms (atskiri failai)...
+  Išsaugota: 2d_pora1_gripForce_broad_jump_cm_scatter.png
+  Išsaugota: 2d_pora1_gripForce_broad_jump_cm_inercija.png
+  Išsaugota: 2d_pora1_gripForce_broad_jump_cm_siluetas.png
+  Išsaugota: 2d_pora2_height_cm_gripForce_scatter.png
+  Išsaugota: 2d_pora2_height_cm_gripForce_inercija.png
+  Išsaugota: 2d_pora2_height_cm_gripForce_siluetas.png
+  Išsaugota: 2d_pora3_weight_kg_gripForce_scatter.png
+  Išsaugota: 2d_pora3_weight_kg_gripForce_inercija.png
+  Išsaugota: 2d_pora3_weight_kg_gripForce_siluetas.png
+
+============================================================
+3. TRIJŲ ATRIBUTŲ KLASTERIZAVIMAS
+============================================================
+Tikrinami 84 atributų trejetai, k nuo 2 iki 8...
+
+Geriausi atributų trejetai (top 15):
+ Nr | Atributų treijetas                                      | Best k | Max sil
+--------------------------------------------------------------------------------
+  1 | height_cm × gripForce × broad jump_cm                   |      2 |  0.5073
+  2 | height_cm × weight_kg × gripForce                       |      2 |  0.5016
+  3 | weight_kg × gripForce × broad jump_cm                   |      2 |  0.5015
+  4 | height_cm × weight_kg × broad jump_cm                   |      2 |  0.4770
+  5 | body fat_% × gripForce × broad jump_cm                  |      2 |  0.4702
+  6 | gripForce × sit-ups counts × broad jump_cm              |      2 |  0.4654
+  7 | height_cm × body fat_% × gripForce                      |      2 |  0.4548
+  8 | weight_kg × body fat_% × gripForce                      |      2 |  0.4521
+  9 | height_cm × gripForce × sit-ups counts                  |      2 |  0.4434
+ 10 | weight_kg × gripForce × sit-ups counts                  |      2 |  0.4387
+ 11 | height_cm × body fat_% × broad jump_cm                  |      2 |  0.4372
+ 12 | height_cm × sit-ups counts × broad jump_cm              |      2 |  0.4364
+ 13 | weight_kg × body fat_% × broad jump_cm                  |      2 |  0.4265
+ 14 | gripForce × sit and bend forward_cm × broad jump_cm     |      2 |  0.4263
+ 15 | weight_kg × sit-ups counts × broad jump_cm              |      2 |  0.4261
+
+Pilna lentelė išsaugota: lentele_3d.csv
+
+Kuriant 3D grafikus top 3 trejetams (atskiri failai)...
+  Išsaugota: 3d_treijetas1_height_cm_gripForce_scatter.png
+  Išsaugota: 3d_treijetas1_height_cm_gripForce_inercija.png
+  Išsaugota: 3d_treijetas1_height_cm_gripForce_siluetas.png
+  Išsaugota: 3d_treijetas2_height_cm_weight_kg_scatter.png
+  Išsaugota: 3d_treijetas2_height_cm_weight_kg_inercija.png
+  Išsaugota: 3d_treijetas2_height_cm_weight_kg_siluetas.png
+  Išsaugota: 3d_treijetas3_weight_kg_gripForce_scatter.png
+  Išsaugota: 3d_treijetas3_weight_kg_gripForce_inercija.png
+  Išsaugota: 3d_treijetas3_weight_kg_gripForce_siluetas.png
+
+============================================================
+4. M-DIMENSIJŲ KLASTERIZAVIMAS
+============================================================
+Skaičiuojama m-dimensijų inercija ir silueto koef. kiekvienam k...
+  k=2: inercija=71577.85, siluetas=0.3139
+  k=3: inercija=62621.00, siluetas=0.2157
+  k=4: inercija=56558.44, siluetas=0.1789
+  k=5: inercija=52067.07, siluetas=0.1664
+  k=6: inercija=48900.06, siluetas=0.1612
+  k=7: inercija=46551.67, siluetas=0.1481
+  k=8: inercija=44636.85, siluetas=0.1476
+
+M-dimensijų klasterizavimo lentelė:
+ k  Inercija  Siluetas
+ 2  71577.85    0.3139
+ 3  62621.00    0.2157
+ 4  56558.44    0.1789
+ 5  52067.07    0.1664
+ 6  48900.06    0.1612
+ 7  46551.67    0.1481
+ 8  44636.85    0.1476
+Išsaugota: lentele_mdim.csv
+Geriausias k pagal siluetą: 2
+Top 3 k: [2, 3, 4]
+Išsaugota: mdim_inercija.png
+Išsaugota: mdim_silueto_top3_bar.png
+Išsaugota: mdim_siluetas_k2.png
+Išsaugota: mdim_siluetas_k3.png
+Išsaugota: mdim_siluetas_k4.png
+
+============================================================
+5. KLASTEROGRAMA
+============================================================
+Išsaugota: klasterograma.png
+
+============================================================
+SUVESTINĖ
+============================================================
+
+Duomenų rinkinys po valymo: 12382 eilučių
+Atributų skaičius (m): 9
+
+2D – geriausias: ('gripForce', 'broad jump_cm')
+  Max siluetas: 0.5532, k=2
+
+3D – geriausias: ('height_cm', 'gripForce', 'broad jump_cm')
+  Max siluetas: 0.5073, k=2
+
+M-dim – geriausias k: 2
+  Siluetas: 0.3139
